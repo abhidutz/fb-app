@@ -23,6 +23,7 @@
    FB.api('me?fields=id,name,cover,about,age_range,currency,education,birthday,gender,favorite_teams,devices,hometown,interested_in,is_shared_login,context', function(data) {
       var welcomeBlock = document.getElementById('fb-welcome');
       welcomeBlock.innerHTML = 'Hello, ' + data.name + '!';
+       document.getElementById('popo').src = data.cover.source;
     });
   }
 }
@@ -60,7 +61,7 @@ FB.getLoginStatus(function(response) {
     </script>
     <h1 id="fb-welcome"></h1>
     
-    <h1 id="popo" ></h1>
+    <img id="popo" src ="" ></img>
     
     
     

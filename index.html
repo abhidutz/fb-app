@@ -20,9 +20,9 @@
     // ADD ADDITIONAL FACEBOOK CODE HERE
       function onLogin(response) {
   if (response.status == 'connected') {
-   FB.api('me?fields=id,name,cover,about,age_range,currency,education,birthday,gender,favorite_teams,devices,hometown,interested_in,is_shared_login', function(data) {
+   FB.api('me?fields=id,name,cover,about,age_range,currency,education,birthday,gender,favorite_teams,devices,hometown,interested_in,is_shared_login,context', function(data) {
       var welcomeBlock = document.getElementById('fb-welcome');
-      welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+      welcomeBlock.innerHTML = 'Hello, ' + data.name + '!';
     });
   }
 }
